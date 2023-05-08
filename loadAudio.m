@@ -10,7 +10,7 @@ function [audio, fs] = loadAudio()
         f2 = randi([1000, 2000]);  % 随机高频（1000 Hz到2000 Hz之间）
         audio = sin(2*pi*f1*t) + sin(2*pi*f2*t);
     else
-        % 提供音频文件
+        % 提供wav或mp3音频文件，此处我手头只有mp3音频
         [filename, filepath] = uigetfile('*.wav;*.mp3', '选择音频文件');
         [audio, fs] = audioread(fullfile(filepath, filename));
     end

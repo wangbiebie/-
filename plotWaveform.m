@@ -1,7 +1,17 @@
 function plotWaveform(audio, fs, titleText)
-    t = (0:length(audio)-1)/fs;
-    plot(t, audio);
-    xlabel('时间 (秒)');
-    ylabel('幅值');
-    title(titleText);
+    % 计算时间轴
+    t = (0:length(audio)-1)/fs;  % 根据采样率计算时间轴
+    
+    % 绘制波形图
+    plot(t, audio);              % 绘制音频波形图
+    xlabel('时间 (秒)');          % 设置横轴标签
+    ylabel('幅值');              % 设置纵轴标签
+    title(titleText);             % 设置图像标题
 end
+
+    %该函数用于绘制音频信号的波形图
+    %首先，根据采样率和音频的长度计算时间轴，以秒为单位
+    %然后，使用plot函数绘制时间轴上对应的音频波形
+    %接下来，设置图像的横轴标签为"时间 (秒)"，表示时间的单位
+    %设置图像的纵轴标签为"幅值"，表示音频信号的振幅
+    %最后，设置图像的标题

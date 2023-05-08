@@ -1,4 +1,3 @@
-
 function filteredAudio = applyFilter(audio, fs)
     % 设计滤波器类型
     choice = questdlg('选择滤波器类型', '滤波器选择', 'IIR滤波器', 'FIR滤波器', '低通滤波器', 'IIR滤波器');
